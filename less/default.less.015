@@ -1,0 +1,1072 @@
+
+
+/* 
+Variables! 
+*/  
+ 
+
+// Font size variables
+
+// Default @fontsize is 11px;
+@fontsize: 15px; 
+@fontsize-1: @fontsize * 1.15;
+@fontsize-2: @fontsize-1 * 1.15;
+@fontsize-3: @fontsize-2 * 1.15;
+@fontsize-4: @fontsize-3 * 1.15;
+@fontsize-5: @fontsize-4 * 1.15;
+@fontsize-6: @fontsize-5 * 1.15;
+@fontsize-7: @fontsize-6 * 1.15;
+@fontsize-8: @fontsize-7 * 1.15;
+@fontsize-01: @fontsize * 0.9;
+@fontsize-02: @fontsize-01 * 0.9;
+@fontsize-03: @fontsize-02 * 0.9;
+@fontsize-04: @fontsize-03 * 0.9;
+@fontsize-05: @fontsize-04 * 0.9;
+@fontsize-06: @fontsize-05 * 0.9;
+@fontsize-07: @fontsize-06 * 0.9;
+@fontsize-08: @fontsize-07 * 0.9;
+// Border variables
+
+@border: 1px solid @color-light2;
+@border-bright: 1px solid @color;
+
+// Change your colors here
+
+@color: #888;
+@altcolor: #00c;
+@background: #EEE;
+@background-1: @background + #222;
+@background-2: @background - #111;
+@background-3: @background + #111;
+
+
+// Color shade definitions. Do not edit. 
+
+@color-1: @color * 1.4;
+@color-2: @color * 1.6;
+@color-3: @color * 1.8;
+@color-4: @color * 0.8;
+@color-5: @color * 0.6;
+@color-6: @color * 0.4;
+@color-7: @color * 0.2;
+
+@altcolor-1: @altcolor * 1.4;
+@altcolor-2: @altcolor * 1.6;
+@altcolor-3: @altcolor * 1.8;
+@altcolor-4: @altcolor * 0.8;
+@altcolor-5: @altcolor * 0.6;
+@altcolor-6: @altcolor * 0.4;
+@altcolor-7: @altcolor * 0.2;
+
+// Custom Color definitions. Only edit if you want custom colors. 
+// Edit these color overrides under these @definitions.
+
+@color-1: @color * 1.4;
+@color-2: @color * 1.6;
+@color-3: @color * 1.8;
+@color-4: @color * 0.8;
+@color-5: @color * 0.6;
+@color-6: @color * 0.4;
+@color-7: @color * 0.2;
+
+@altcolor-1: @altcolor * 1.4;
+@altcolor-2: @altcolor * 1.6;
+@altcolor-3: @altcolor * 1.8;
+@altcolor-4: @altcolor * 0.8;
+@altcolor-5: @altcolor * 0.6;
+@altcolor-6: @altcolor * 0.4;
+@altcolor-7: @altcolor * 0.2;
+
+
+  
+/* 
+Mix-ins are like functions for commonly used operations, 
+such as apply borders. We create variables by prepending 
+the @ symbol. 
+*/ 
+
+// Border related mix-ins 
+
+.rounded(@radius: 5px) {  
+    -moz-border-radius: @radius;  
+    -webkit-border-radius: @radius;  
+    border-radius: @radius;  
+}  
+.border {
+	border: @border;
+}
+.border-important {
+	border: @border !important;
+}
+
+// Font related mix-ins
+
+.font-style(@type: italic) {
+	font-style: @type
+}
+.font {
+	font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
+}
+.headfont {
+	font-family: Cambria, Georgia, Times, "Times New Roman", serif;
+}
+.codefont {
+	font-family: Consolas, Monaco, "Courier New", monospace;
+}
+
+// @color related css tags. Do not edit 
+
+.color {
+color: @color;
+}
+.color-1 {
+color: @color-1;
+}
+.color-2 {
+color: @color-2;
+}
+.color-3 {
+color: @color-3;
+}
+.color-4 {
+color: @color-4;
+}
+.color-5 {
+color: @color-5;
+}
+.color-6 {
+color: @color-6;
+}
+.color-7 {
+color: @color-7;
+}
+
+// Background based on the @color related css tags. Do not edit 
+
+.bg {
+background-color: @background;
+}
+.bg-1 {
+background-color: @background-1;
+}
+.bg-2 {
+background-color: @background-2;
+}
+.bg-3 {
+background-color: @background-3;
+}
+
+// @altcolor related css tags. Do not edit 
+.altcolor {
+color: @altcolor;
+}
+.altcolor-1 {
+color: @altcolor-1;
+}
+.altcolor-2 {
+color: @altcolor-2;
+}
+.altcolor-3 {
+color: @altcolor-3;
+}
+.altcolor-4 {
+color: @altcolor-4;
+}
+.altcolor-5 {
+color: @altcolor-5;
+}
+.altcolor-6 {
+color: @altcolor-6;
+}
+.altcolor-7 {
+color: @altcolor-7;
+}
+
+// Background based on the @altcolor related css tags. Do not edit 
+
+
+.altbg {
+background-color: @altcolor;
+}
+.altbg-1 {
+background-color: @altcolor-5;
+}
+.altbg-2 {
+background-color: @altcolor-6;
+}
+.altbg-3 {
+background-color: @altcolor-7;
+}
+
+
+
+// Background color related css tags. Do not edit 
+
+
+.background {
+background-color: @background;
+}
+.background-1 {
+background-color: @background-1;
+}
+.background-2 {
+background-color: @background-2;
+}
+.background-3 {
+background-color: @background-3;
+}
+
+
+
+/* =Global Elements
+-------------------------------------------------------------- */
+
+body, input, textarea {
+	background: @background;
+    .headfont;
+	.color;
+	font: @fontsize;
+    line-height: @fontsize * 1.25;
+}
+p, ul, ol, dd, pre {
+    margin-bottom: 22px;
+	font: @fontsize;
+    line-height: @fontsize * 1.25;
+}
+pre, code {
+	.codefont;
+	font-size: @fontsize-3;
+	line-height: @fontsize-3 * 1.25;
+}
+blockquote {
+    color: @color-4;
+    .font-style;
+}
+table {
+    .border;
+    border-width: 1px 1px 0 1px;
+    font-size: @fontsize-2;
+    line-height: @fontsize-2 * 1.25;
+    margin: 0 0 22px 0;
+    text-align: left;
+}
+caption {
+    text-align: left;
+}
+tr {
+    border-bottom: @border;
+}
+th, td {
+    padding: .7em 1.25em;
+}
+hr {
+    background-color: @background-3;
+    border: 0;
+    color: @color-2;
+    height: 1px;
+    margin-bottom: 22px;
+}
+a: link {
+    color: @altcolor-4;
+}
+a: visited {
+    color: @altcolor-1;
+}
+a:active, a:hover {
+    color: @color;
+}
+
+
+/* =Header
+-------------------------------------------------------------- */
+
+#header {
+    z-index: 2;
+}
+#branding {
+    padding: 88px 0 44px 0;
+}
+#blog-title {
+    .font;
+    font-size: @fontsize-8;
+    font-weight: bold;
+    line-height: @fontsize-8 * 1.25;
+	a {
+    color: @color-7;
+    text-decoration: none;
+		:active { 
+			.altcolor; 
+		}
+		:hover { 
+			.altcolor; 
+		}
+	}
+}	
+#blog-description {
+	color: @color-4;
+	font-size: @fontsize-2;
+	.font-style;
+}
+
+
+/* =Menu
+-------------------------------------------------------------- */
+// Change menu entry width here;
+@menuitem-width: 10em;
+
+
+.skip-link {
+    display: none;
+}
+#access {
+    border-bottom: @border;
+    height: @fontsize-2 * 2.1;
+    font-size: @fontsize-2;
+    overflow: visible;
+    z-index: 100;
+}
+
+/*** ESSENTIAL STYLES ***/
+
+
+.hidemenu {
+	top: -999em;
+}
+.submenu {
+	left: @menuitem-width; /* match ul width */
+	top: 0;
+}
+.submenu2 {
+	left: 0;
+	top: 2.5em; /* match top ul list item height */
+	z-index: 	99;
+}
+
+
+.sf-menu, .sf-menu * {
+	margin: 			0;
+	padding: 		0;
+	list-style: 		none;
+}
+.sf-menu {
+	line-height: 	1.0;
+}
+.sf-menu ul {
+	position: 		absolute;
+	.hidemenu;
+	width: 			@menuitem-width; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width: 			100%;
+}
+.sf-menu li:hover {
+	visibility: 		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float: 			left;
+	position: 		relative;
+}
+.sf-menu a {
+	display: 		block;
+	position: 		relative;
+}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+	.submenu2;
+}
+.sf-menu li:hover li ul, .sf-menu li.sfHover li ul {
+	.hidemenu;
+}
+.sf-menu li li:hover ul, .sf-menu li li.sfHover ul {
+	.submenu;
+}
+.sf-menu li li:hover li ul, .sf-menu li li.sfHover li ul {
+	.hidemenu;
+}
+.sf-menu li li li:hover ul, .sf-menu li li li.sfHover ul {
+	.submenu;
+}
+
+
+/*** THEMATIC SKIN ***/
+.sf-menu {
+    border-right: @border;
+	float: left;
+}
+.sf-menu a {
+	border-left: @border;
+	border-top: @border;
+	border-bottom: @border;
+	padding: 9px 13px;
+	text-decoration: none;
+}
+.sf-menu .current_page_item a, .sf-menu .current_page_ancestor a, .sf-menu .current_page_parent a {
+    border-bottom-color: @background-1;
+}
+.sf-menu a, .sf-menu a: visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color: @background-2;
+}
+.sf-menu li {
+	background: 	@background-1;
+}
+.sf-menu li li {
+	background: 	@background-1;
+}
+.sf-menu li li li {
+	background: 	@background;
+}
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a: focus, .sf-menu a:hover, .sf-menu a:active {
+    background:     @background-2;
+	outline: 	0;
+    border-bottom-color: @color-2;
+}
+.sf-menu ul {
+    border-right: @border;
+    border-bottom: @border;
+}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+	top: 32px; /* overriding essential styles */
+}
+.sf-menu ul ul {
+    margin-top: 0;
+}
+.sf-menu ul a {
+    background: @color-3;
+	border-bottom: none;
+}
+.sf-menu ul a:hover {
+    color: @altcolor;
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+
+#main {
+    clear: both;
+    padding: 66px 0 22px 0;
+}
+.page-title {
+    font-size: @fontsize-2;
+    line-height: @fontsize-2 * 1.25;
+    padding: 0 0 44px 0;
+}
+.attachment .page-title {
+    .font-style;
+}
+.page-title a {
+    color: @color-4;
+    text-decoration: none;
+}
+.page-title a:active, .page-title a:hover {
+    color: @altcolor;
+}
+.page-title span {
+    .font-style;
+}
+.page-title .meta-nav {
+    .font-style(normal);
+}
+.hentry {
+    padding: 0 0 22px 0;
+}
+.single .hentry {
+    padding: 0;
+}
+.home #content .sticky {
+    .border;
+    margin: 0 0 66px 0;
+    padding: 22px 20px 0 20px;
+}
+.entry-title {
+    .font;
+    font-size: @fontsize-5;
+    font-weight: bold;
+    line-height: @fontsize-5 * 1.25;
+    padding: 0 0 7px 0;
+}
+.entry-title a {
+    color: @color-7;
+    text-decoration: none;
+}
+.entry-title a:active, .entry-title a:hover {
+    color: @altcolor;
+}
+.entry-meta {
+    color: @color-4;
+    font-size: @fontsize-2;
+    .font-style;
+    line-height: @fontsize-2 * 1.25;
+}
+.entry-meta .author {
+}
+.entry-meta .n {
+    font-size: @fontsize;
+    .font-style(normal);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.entry-meta a {
+    color: @color-4;
+    text-decoration: none;
+}
+.entry-meta a:active, .entry-meta a:hover {
+    color: @altcolor;
+}
+.entry-meta abbr {
+    border: none;
+    cursor: text;
+    font-size: @fontsize;
+    .font-style(normal);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.entry-content {
+    padding: 22px 0 0 0;
+}
+.entry-content, .entry-content p  {
+	font-size: @fontsize-1;
+    font-weight: bold;
+    line-height: @fontsize-1 * 1.5;
+}
+.entry-content h1, .entry-content h2 {
+    .font;
+    font-size: @fontsize-5;
+    font-weight: bold;
+    padding: 28px 0 14px 0;
+}
+.entry-content h3 {
+    font-size: @fontsize-4;
+    .font-style;
+    padding: 28px 0 14px 0;
+}
+.entry-content h4 {
+    font-size: @fontsize;
+    .font;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.entry-content table {
+    margin-left: 1px;
+}
+.entry-content embed {
+    margin: 0 0 22px 0;
+}
+.entry-utility {
+    color: @color-4;
+    font-size: @fontsize-2;
+    line-height: @fontsize-2 * 1.25;
+    margin: 0 0 44px 0;
+}
+.entry-utility a {
+    color: @color-4;
+    .font-style;
+    text-decoration: none;
+}
+.entry-utility a:active, .entry-utility a:hover {
+    color: @altcolor;
+}
+.page-link {
+    font-size: @fontsize-2;
+    font-weight: bold;
+    line-height: @fontsize-2 * 1.25;
+    margin: 0 0 22px 0;
+    padding: 22px 0 0 0;
+    word-spacing: 0.5em;
+}
+.page-link a {
+    .border;
+    color: @color-4;
+    font-weight: normal;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+}
+.page-link a:active, .page-link a:hover {
+    color: @altcolor;
+}
+ul#links-page, ul#archives-page {
+    list-style: none;
+    margin-left: 0;
+    overflow: hidden;
+}
+li.content-column {
+    float: left;
+    margin-right: 20px;
+    width: 45%;
+}
+.gallery {
+    padding: 0 0 22px 0;
+}
+.wp-caption-text, .gallery-caption {
+    color: @color-4;
+    font-size: @fontsize-2;
+    line-height: @fontsize-2 * 1.25;
+}
+#author-info {
+    margin: 0 0 44px 0;
+    overflow: hidden;
+}
+#author-info .avatar {
+    float: left;
+    margin: .3em 1em 0 0;
+}
+
+
+/* =Attachments
+-------------------------------------------------------------- */
+
+.attachment-jpeg #container, .attachment-png #container {
+    width: 100%;
+}
+.attachment-jpeg #content, .attachment-png #content {
+    width: 930px;
+}
+.attachment-jpeg #comments, .attachment-png #comments {
+    width: 540px;
+    overflow: hidden;
+}
+.attachment-jpeg .main-aside, .attachment-png .main-aside {
+    display: none;    
+}
+
+
+/* ~Navigation
+-------------------------------------------------------------- */
+
+.navigation {
+    color: @color-4;
+    font-size: @fontsize-2;
+    line-height: @fontsize-2 * 1.25;
+    margin: 0 0 22px 0;
+    overflow: hidden;
+}
+.navigation a {
+    color: @color-4;
+    .font-style;
+    text-decoration: none;
+}
+.navigation a:active, .navigation a:hover {
+    color: @altcolor;
+}
+.navigation .meta-nav {
+    .font-style(normal);
+}
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+.nav-next {
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+#nav-above,#nav-below {
+	width: 100%;
+}
+#nav-above {
+    display: none;
+}
+.paged #nav-above {
+    display: block;
+    padding: 0 0 44px 0;
+}
+
+
+/* ~Comments
+-------------------------------------------------------------- */
+
+#comments {
+    padding: 22px 0 0 0;
+}
+#comments, #comments input, #comments textarea {
+    font-size: @fontsize-2;
+    line-height: @fontsize-2 * 1.25;
+}
+#comments code {
+    font-size: @fontsize-1;
+    line-height: @fontsize-2 * 1.25;
+}
+#comments h3 {
+    .font;
+    font-size: @fontsize-3;
+    font-weight: bold;
+    line-height: @fontsize-3 * 1.25;
+    padding: 0 0 18px 0;
+}
+#comments-list {
+    padding: 0 0 18px 0;
+}
+#comments-list ol, #comments-list ul {
+    list-style: none;
+    margin: 0;
+}
+#comments-list ol {
+    .border;
+    border-bottom: none;
+    margin: 0 0 18px 0;
+}
+#comments-list li {
+    background: @color-3;
+    border-bottom: @border;
+    padding: 18px 1.5em 0 1.5em;
+    position: relative;
+}
+#comments-list li.alt {
+    background: @background-1;
+}
+#comments-list li.bypostauthor {
+    background: @background-2;
+}
+#comments-list ul li {
+    .border;
+    margin: 0 0 18px 0;
+}
+#comments-list li .avatar {
+    position: absolute;
+    top: 22px;
+    left: 1.5em;
+    width: 36px;
+    height: 36px;
+}
+#comments-list .comment-author {
+    font-weight: bold;
+    padding: 9px 0 0 46px;
+}
+#comments-list .comment-meta {
+    color: @color-4;
+    font-size: @fontsize;
+    padding: 0 0 9px 46px;
+}
+#comments-list .comment-meta a {
+    color: @color-4;
+    .font-style;
+    text-decoration: none;
+}
+#comments-list .comment-meta a:active, #comments-list .comment-meta a:hover {
+    color: @altcolor;
+}
+.comment-reply-link {
+    font-size: @fontsize;
+    padding: 0 0 18px 0;
+    text-align: right;
+}
+.comment-reply-link a {
+    color: @color-4;
+    .font-style;
+    text-decoration: none;
+}
+.comment-reply-link a:active, .comment-reply-link a:hover {
+    color: @altcolor;
+}
+.comment-navigation {
+    font-weight: bold;
+    padding: 0 0 18px 0;
+    margin-right: 0.5em;
+}
+.comment-navigation a {
+    .border;
+    color: @color-4;
+    font-weight: normal;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+}
+.comment-navigation a:active, .comment-navigation a:hover {
+    color: @altcolor;
+}
+.comment-navigation a, .comment-navigation span {
+    margin-right: 0.5em;
+}
+#trackbacks-list .comment-content {
+    position: absolute;
+    left: -9000px;
+}
+#respond {
+    background: @background-1;
+    margin-bottom: 22px;
+    overflow: hidden;
+    padding: 18px 0 0 0;
+    position: relative;
+}
+#comments-list #respond {
+    border-bottom: @border;
+    margin: 0 0 18px 0;
+    padding: 18px 1.5em;
+}
+#comments-list ul #respond {
+    .border;
+    margin: 0;
+}
+#cancel-comment-reply {
+    font-size: @fontsize;
+    position: absolute;
+    top: 18px;
+    right: 1.5em;
+}
+#cancel-comment-reply a {
+    color: @color-4;
+}
+#respond .required {
+    color: @altcolor;
+    font-weight: bold;
+}
+.form-section label {
+    font-size: @fontsize;
+}
+.form-section input {
+    margin: 0 0 18px 0;
+    width: 98%;
+}
+.form-section textarea {
+    width: 99%;
+}
+#form-allowed-tags p {
+    color: @color-4;
+    font-size: @fontsize;
+    margin: 0;    
+}
+#form-allowed-tags span {
+    .font-style;
+}
+#form-allowed-tags code {
+    font-size: @fontsize;
+    line-height: normal;
+}
+.form-submit {
+    padding: 18px 0 0 0;
+    text-align: right;
+}
+.subscribe-to-comments {
+    color: @color-4;
+    float: left;
+    font-size: @fontsize;
+    margin: 0;
+    padding: 18px 0 0 0;
+}
+.solo-subscribe-to-comments {
+    color: @color-4;
+    font-size: @fontsize;
+    padding: 18px 0 0 0;
+}
+.comment_license {
+    color: @color-4;
+    clear: both;
+    font-size: @fontsize;
+    margin: 0;
+    padding: 18px 0 0 0;
+}
+
+
+/* ~Asides, Sidebars & Widget-Ready Areas
+-------------------------------------------------------------- */
+
+.aside, .aside input {
+    font-size: @fontsize-2;
+    line-height: @fontsize-2 * 1.25;
+    margin-bottom: 6px;
+}
+.aside p, .aside ul, .aside ol, .aside dd, .aside pre {
+    margin-bottom: 18px;
+}
+.aside pre, .aside code {
+    font-size: @fontsize-1;
+    line-height: @fontsize-2 * 1.25;
+}
+.aside .current_page_item a {
+    color: @altcolor;
+}
+.aside .current_page_item .page_item a {
+    color: @color-4;
+}
+.aside .current_page_item .page_item a:hover, .aside .current_page_item .page_item a:active {
+    color: @altcolor;
+}
+.aside {
+    color: @color-4;
+}
+.aside a {
+    color: @color-4;
+}
+.aside a:active, .aside a:hover {
+    color: @altcolor;
+}
+.aside h3 {
+    font-size: @fontsize-3;
+    .font-style;
+    line-height: @fontsize-3 * 1.25;
+}
+.aside h3 a {
+    text-decoration: none;
+}
+.aside caption {
+    font-size: @fontsize;
+    .font;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.aside ul {
+    list-style: none;
+    margin-left: 0;
+}
+.aside ul ul {
+    list-style: disc;
+    margin: 0 0 22px 20px;
+}
+.aside ul ul li {
+    padding: 1px 0;
+}
+.aside ul ul ul {
+    margin-bottom: 0;
+}
+.aside form, .aside table {
+    margin-bottom: 22px;
+}
+.aside table {
+    border: none;
+}
+.aside thead {
+    .border;
+}
+.aside tbody {
+    .border;
+}
+.aside th, .aside td {
+    border-right: @border;
+    padding: .25em .8em;
+}
+.aside tfoot tr {
+    border: none;
+}
+.aside tfoot td {
+    border-color: transparent;
+}
+.widget_tag_cloud {
+    margin: 0 0 22px 0;
+}
+.aside #searchsubmit {
+	display: none;	
+}
+/*
+    Main Asides
+*/
+.main-aside ul {
+    padding: 0 20px;
+}
+.main-aside h3 {
+}
+.main-aside ul ul {
+    padding: 0;
+}
+#primary {
+    border: @border-bright;
+    padding: 18px 0 0 0;
+    margin-bottom: 22px;
+}
+/*
+    Content Asides
+*/
+#content .aside {
+    border: @border-bright;
+    margin: 0 0 22px 0;
+    padding: 18px 0 0 0;
+}
+#content .aside ul {
+    padding: 0 20px;
+}
+#content .aside h3 {
+    .headfont;
+    font-weight: normal;
+    font-size: @fontsize-4;
+    .font-style;
+    padding: 0 0 7px 0;
+    text-transform: none;
+}
+#content .aside ul ul {
+    padding: 0;
+}
+/*
+    Footer Asides
+*/
+#subsidiary {
+    padding: 33px 0 0 0;    
+}
+
+
+/* ~Search
+-------------------------------------------------------------- */
+#s {
+	width: 88%;
+	font-size: @fontsize-02;
+    line-height: @fontsize-2 * 1.25;	
+}
+
+
+/* ~Footer
+-------------------------------------------------------------- */
+
+#footer {
+    border-top: @border-bright;
+    margin-top: 22px;
+}
+#siteinfo {
+    color: @color-4;
+    font-size: @fontsize;
+    line-height: @fontsize-2 * 1.25;
+    padding: 22px 0 44px 0;
+}
+#siteinfo a {
+    color: @color-4;
+}
+#siteinfo a:active, #siteinfo a:hover {
+    color: @altcolor;
+}
+
+
+/* ~PageNavi
+-------------------------------------------------------------- */
+
+/* Using !important to override PageNavi CSS */
+
+.wp-pagenavi {
+    margin: 0 0 0 -.5em;
+    padding: 0.5em 0;   
+}	
+.wp-pagenavi a, .wp-pagenavi a: link, .wp-pagenavi span {
+    .border-important;
+    color: @color-4 !important;
+    .font-style(normal);
+    margin: 0 .375em !important;
+    padding: 0.5em 0.25em !important;
+}
+.wp-pagenavi a: visited {
+    .border-important;
+    color: @color-4 !important;
+}
+.wp-pagenavi a:hover {
+    .border-important;
+    color: @altcolor !important;
+}
+.wp-pagenavi a:active {
+    .border-important;
+    color: @altcolor !important;
+}
+.wp-pagenavi span.pages {
+    border: none !important;
+    color: @color-4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.wp-pagenavi span.current {
+    border: none !important;
+    color: @color-4 !important;
+    font-weight: normal !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.wp-pagenavi span.extend {
+    background-color: @background-3;
+    border: @border-bright;
+    color: @color-7;
+    margin: 2px;
+    padding: 2px 4px;
+}

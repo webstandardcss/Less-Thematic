@@ -1,0 +1,1054 @@
+.font {
+	font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
+}
+.headfont {
+	font-family: Cambria, Georgia, Times, "Times New Roman", serif;
+}
+
+
+// Change your colors here
+
+@color: #222;
+@background: #FFF;
+@altcolor: #0000FF;
+
+// Color shade definitions. Do not edit
+
+@color-light3: @color + #DDD;
+@color-light2: @color + #999;
+@color-light1: @color + #666666;
+@color-light: @color + #333;
+@color-dark: @color - #333;
+@color-dark1: @color - #666666;
+@color-dark2: @color - #999;
+@color-dark3: @color - #DDD;
+
+@background-light3: @background + #DDD;
+@background-light2: @background + #999;
+@background-light1: @background + #666666;
+@background-light: @background + #333;
+@background-dark: @background - #333;
+@background-dark1: @background - #666666;
+@background-dark2: @background - #999;
+@background-dark3: @background - #DDD;
+
+@altcolor-light3: @altcolor + #DDD;
+@altcolor-light2: @altcolor + #999;
+@altcolor-light1: @altcolor + #666666;
+@altcolor-light: @altcolor + #333;
+@altcolor-dark: @altcolor - #333;
+@altcolor-dark1: @altcolor - #666666;
+@altcolor-dark2: @altcolor - #999;
+@altcolor-dark3: @altcolor - #DDD;
+
+// @color related css tags. Do not edit 
+
+.color-light3 {
+color: @color-light3;
+}
+.color-light2 {
+color: @color-light2;
+}
+.color-light1 {
+color: @color-light1;
+}
+.color-light {
+color: @color-light;
+}
+.color {
+color: @color;
+}
+.color-dark {
+color: @color-dark;
+}
+.color-dark1 {
+color: @color-dark1;
+}
+.color-dark2 {
+color: @color-dark2;
+}
+.color-dark3 {
+color: @color-dark3;
+}
+
+// Background based on the @color related css tags. Do not edit 
+
+.bg-light3 {
+background-color: @background-light3;
+}
+.bg-light2 {
+background-color: @background-light2;
+}
+.bg-light1 {
+background-color: @background-light1;
+}
+.bg-light {
+background-color: @background-light;
+}
+.bg {
+background-color: @background;
+}
+.bg-dark {
+background-color: @background-dark;
+}
+.bg-dark1 {
+background-color: @background-dark1;
+}
+.bg-dark2 {
+background-color: @background-dark2;
+}
+.bg-dark3 {
+background-color: @background-dark3;
+}
+
+
+// @altcolor related css tags. Do not edit 
+
+
+.altcolor-light3 {
+color: @altcolor-light3;
+}
+.altcolor-light2 {
+color: @altcolor-light2;
+}
+.altcolor-light1 {
+color: @altcolor-light1;
+}
+.altcolor-light {
+color: @altcolor-light;
+}
+.altcolor {
+color: @altcolor;
+}
+.altcolor-dark {
+color: @altcolor-dark;
+}
+.altcolor-dark1 {
+color: @altcolor-dark1;
+}
+.altcolor-dark2 {
+color: @altcolor-dark2;
+}
+.altcolor-dark3 {
+color: @altcolor-dark3;
+}
+
+// Background based on the @altcolor related css tags. Do not edit 
+
+.altbg-light3 {
+background-color: @altcolor-light3;
+}
+.altbg-light2 {
+background-color: @altcolor-light2;
+}
+.altbg-light1 {
+background-color: @altcolor-light1;
+}
+.altbg-light {
+background-color: @altcolor-light;
+}
+.altbg {
+background-color: @altcolor;
+}
+.altbg-dark {
+background-color: @altcolor-dark;
+}
+.altbg-dark1 {
+background-color: @altcolor-dark1;
+}
+.altbg-dark2 {
+background-color: @altcolor-dark2;
+}
+.altbg-dark3 {
+background-color: @altcolor-dark3;
+}
+
+
+
+// Background color related css tags. Do not edit 
+
+
+.background-light3 {
+background-color: @background-light3;
+}
+.background-light2 {
+background-color: @background-light2;
+}
+.background-light1 {
+background-color: @background-light1;
+}
+.background-light {
+background-color: @background-light;
+}
+.background {
+background-color: @background;
+}
+.background-dark {
+background-color: @background-dark;
+}
+.background-dark1 {
+background-color: @background-dark1;
+}
+.background-dark2 {
+background-color: @background-dark2;
+}
+.background-dark3 {
+background-color: @background-dark3;
+}
+
+
+
+/* =Global Elements
+-------------------------------------------------------------- */
+
+body, input, textarea {
+    .headfont;
+	font: 15px;
+    line-height:22px;
+}
+p, ul, ol, dd, pre {
+    margin-bottom:22px;
+}
+pre, code {
+	font:14px Monaco, monospace;
+	line-height:22px;
+}
+blockquote {
+    color: @color-dark;
+    font-style:italic;
+}
+table {
+    border:1px solid @color-light2;
+    border-width:1px 1px 0 1px;
+    font-size:13px;
+    line-height:18px;
+    margin:0 0 22px 0;
+    text-align:left;
+}
+caption {
+    text-align:left;
+}
+tr {
+    border-bottom:1px solid @color-light2;
+}
+th, td {
+    padding: .7em 1.25em;
+}
+hr {
+    background-color: @background-light2;
+    border:0;
+    color: @color-light2;
+    height:1px;
+    margin-bottom:22px;
+}
+a:link {
+    color: @altcolor-dark;
+}
+a:visited {
+    color: @altcolor-light;
+}
+a:active,
+a:hover {
+    color: @color;
+}
+
+
+/* =Header
+-------------------------------------------------------------- */
+
+#header {
+    z-index:2;
+}
+#branding {
+    padding:88px 0 44px 0;
+}
+#blog-title {
+    .font;
+    font-size:34px;
+    font-weight:bold;
+    line-height:40px;
+}
+#blog-title a {
+    color: @color-dark3;
+    text-decoration:none;
+}
+#blog-title a:active,
+#blog-title a:hover {
+    color: @altcolor;
+}
+#blog-description {
+    color: @color-dark;
+    font-size:13px;
+    font-style:italic;
+}
+
+
+/* =Menu
+-------------------------------------------------------------- */
+
+.skip-link {
+    display:none;
+}
+#access {
+    border-bottom:1px solid @color-light2;
+    height:32px;
+    font-size:13px;
+    overflow:visible;
+    z-index:100;
+}
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width:			100%;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** THEMATIC SKIN ***/
+.sf-menu {
+    border-right:1px solid @color-light2;
+	float:left;
+}
+.sf-menu a {
+	border-left:1px solid @color-light2;
+	border-top:1px solid @color-light2;
+	border-bottom:1px solid @color-light2;
+	padding:9px 13px;
+	text-decoration:none;
+}
+.sf-menu .current_page_item a,
+.sf-menu .current_page_ancestor a,
+.sf-menu .current_page_parent a {
+    border-bottom-color: @background-light3;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#666;
+}
+.sf-menu li {
+	background:		@background-light3;
+}
+.sf-menu li li {
+	background:		@background-light3;
+}
+.sf-menu li li li {
+	background:		@background-light;
+}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+    background:     @color-light3;
+	outline:		0;
+    border-bottom-color: @color-light2;
+}
+.sf-menu ul {
+    border-right:1px solid @color-light2;
+    border-bottom:1px solid @color-light2;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	top:32px; /* overriding essential styles */
+}
+.sf-menu ul ul {
+    margin-top:0;
+}
+.sf-menu ul a {
+    background: @color-light3;
+	border-bottom:none;
+}
+.sf-menu ul a:hover {
+    color: @altcolor;
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+
+#main {
+    clear:both;
+    padding:66px 0 22px 0;
+}
+.page-title {
+    font-size:13px;
+    line-height:18px;
+    padding:0 0 44px 0;
+}
+.attachment .page-title {
+    font-style:italic;
+}
+.page-title a {
+    color: @color-dark;
+    text-decoration:none;
+}
+.page-title a:active,
+.page-title a:hover {
+    color: @altcolor;
+}
+.page-title span {
+    font-style:italic;
+}
+.page-title .meta-nav {
+    font-style:normal;
+}
+.hentry {
+    padding:0 0 22px 0;
+}
+.single .hentry {
+    padding:0;
+}
+.home #content .sticky {
+    border:1px solid @color-light2;
+    margin:0 0 66px 0;
+    padding:22px 20px 0 20px;
+}
+.entry-title {
+    .font;
+    font-size:26px;
+    font-weight:bold;
+    line-height:26px;
+    padding:0 0 7px 0;
+}
+.entry-title a {
+    color: @color-dark3;
+    text-decoration:none;
+}
+.entry-title a:active,
+.entry-title a:hover {
+    color: @altcolor;
+}
+.entry-meta {
+    color: @color-dark;
+    font-size:13px;
+    font-style:italic;
+    line-height:18px;
+}
+.entry-meta .author {
+}
+.entry-meta .n {
+    font-size:11px;
+    font-style:normal;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+}
+.entry-meta a {
+    color: @color-dark;
+    text-decoration:none;
+}
+.entry-meta a:active,
+.entry-meta a:hover {
+    color: @altcolor;
+}
+.entry-meta abbr {
+    border:none;
+    cursor:text;
+    font-size:11px;
+    font-style:normal;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+}
+.entry-content {
+    padding:22px 0 0 0;
+}
+.entry-content h1,
+.entry-content h2 {
+    .font;
+    font-size:19px;
+    font-weight:bold;
+    padding:28px 0 14px 0;
+}
+.entry-content h3 {
+    font-size:17px;
+    font-style:italic;
+    padding:28px 0 14px 0;
+}
+.entry-content h4 {
+    font-size:11px;
+    .font;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+}
+.entry-content table {
+    margin-left:1px;
+}
+.entry-content embed {
+    margin:0 0 22px 0;
+}
+.entry-utility {
+    color: @color-dark;
+    font-size:13px;
+    line-height:18px;
+    margin:0 0 44px 0;
+}
+.entry-utility a {
+    color: @color-dark;
+    font-style:italic;
+    text-decoration:none;
+}
+.entry-utility a:active,
+.entry-utility a:hover {
+    color: @altcolor;
+}
+.page-link {
+    font-size:13px;
+    font-weight:bold;
+    line-height:18px;
+    margin:0 0 22px 0;
+    padding:22px 0 0 0;
+    word-spacing:0.5em;
+}
+.page-link a {
+    border:1px solid @color-light2;
+    color: @color-dark;
+    font-weight:normal;
+    padding:0.5em 0.75em;
+    text-decoration:none;
+}
+.page-link a:active,
+.page-link a:hover {
+    color: @altcolor;
+}
+ul#links-page,
+ul#archives-page {
+    list-style:none;
+    margin-left:0;
+    overflow:hidden;
+}
+li.content-column {
+    float:left;
+    margin-right:20px;
+    width:45%;
+}
+.gallery {
+    padding:0 0 22px 0;
+}
+.wp-caption-text,
+.gallery-caption {
+    color: @color-dark;
+    font-size:13px;
+    line-height:18px;
+}
+#author-info {
+    margin:0 0 44px 0;
+    overflow:hidden;
+}
+#author-info .avatar {
+    float:left;
+    margin:.3em 1em 0 0;
+}
+
+
+/* =Attachments
+-------------------------------------------------------------- */
+
+.attachment-jpeg #container,
+.attachment-png #container {
+    width:100%;
+}
+.attachment-jpeg #content,
+.attachment-png #content {
+    width:930px;
+}
+.attachment-jpeg #comments,
+.attachment-png #comments {
+    width:540px;
+    overflow:hidden;
+}
+.attachment-jpeg .main-aside,
+.attachment-png .main-aside {
+    display:none;    
+}
+
+
+/* ~Navigation
+-------------------------------------------------------------- */
+
+.navigation {
+    color: @color-dark;
+    font-size:13px;
+    line-height:18px;
+    margin:0px 0 22px 0;
+    overflow:hidden;
+}
+.navigation a {
+    color: @color-dark;
+    font-style:italic;
+    text-decoration:none;
+}
+.navigation a:active,
+.navigation a:hover {
+    color: @altcolor;
+}
+.navigation .meta-nav {
+    font-style:normal;
+}
+.nav-previous {
+	float: left;
+	width:50%;
+}
+.nav-next {
+	float: right;
+	width:50%;
+	text-align:right;
+}
+#nav-above,#nav-below {
+	width: 100%;
+}
+#nav-above {
+    display:none;
+}
+.paged #nav-above {
+    display:block;
+    padding:0 0 44px 0;
+}
+
+
+/* ~Comments
+-------------------------------------------------------------- */
+
+#comments {
+    padding:22px 0 0 0;
+}
+#comments,
+#comments input,
+#comments textarea {
+    font-size:13px;
+    line-height:18px;
+}
+#comments code {
+    font-size:12px;
+    line-height:18px;
+}
+#comments h3 {
+    .font;
+    font-size:15px;
+    font-weight:bold;
+    line-height:22px;
+    padding:0 0 18px 0;
+}
+#comments-list {
+    padding:0 0 18px 0;
+}
+#comments-list ol,
+#comments-list ul {
+    list-style:none;
+    margin:0;
+}
+#comments-list ol {
+    border:1px solid @color-light2;
+    border-bottom:none;
+    margin:0 0 18px 0;
+}
+#comments-list li {
+    background: @color-light3;
+    border-bottom:1px solid @color-light2;
+    padding:18px 1.5em 0 1.5em;
+    position:relative;
+}
+#comments-list li.alt {
+    background: @background-light3;
+}
+#comments-list li.bypostauthor {
+    background: @altcolor-light3;
+}
+#comments-list ul li {
+    border:1px solid @color-light2;
+    margin:0 0 18px 0;
+}
+#comments-list li .avatar {
+    position:absolute;
+    top:22px;
+    left:1.5em;
+    width:36px;
+    height:36px;
+}
+#comments-list .comment-author {
+    font-weight:bold;
+    padding:9px 0 0 46px;
+}
+#comments-list .comment-meta {
+    color: @color-dark;
+    font-size:11px;
+    padding:0 0 9px 46px;
+}
+#comments-list .comment-meta a {
+    color: @color-dark;
+    font-style:italic;
+    text-decoration:none;
+}
+#comments-list .comment-meta a:active,
+#comments-list .comment-meta a:hover {
+    color: @altcolor;
+}
+.comment-reply-link {
+    font-size:11px;
+    padding:0 0 18px 0;
+    text-align:right;
+}
+.comment-reply-link a {
+    color: @color-dark;
+    font-style:italic;
+    text-decoration:none;
+}
+.comment-reply-link a:active,
+.comment-reply-link a:hover {
+    color: @altcolor;
+}
+.comment-navigation {
+    font-weight:bold;
+    padding:0 0 18px 0;
+    margin-right:0.5em;
+}
+.comment-navigation a {
+    border:1px solid @color-light2;
+    color: @color-dark;
+    font-weight:normal;
+    padding:0.5em 0.75em;
+    text-decoration:none;
+}
+.comment-navigation a:active,
+.comment-navigation a:hover {
+    color: @altcolor;
+}
+.comment-navigation a,
+.comment-navigation span {
+    margin-right:0.5em;
+}
+#trackbacks-list .comment-content {
+    position:absolute;
+    left:-9000px;
+}
+#respond {
+    background: @background-light3;
+    margin-bottom:22px;
+    overflow:hidden;
+    padding:18px 0 0 0;
+    position:relative;
+}
+#comments-list #respond {
+    border-bottom:1px solid @color-light2;
+    margin:0 0 18px 0;
+    padding:18px 1.5em;
+}
+#comments-list ul #respond {
+    border:1px solid @color-light2;
+    margin:0;
+}
+#cancel-comment-reply {
+    font-size:11px;
+    position:absolute;
+    top:18px;
+    right:1.5em;
+}
+#cancel-comment-reply a {
+    color: @color-dark;
+}
+#respond .required {
+    color: @altcolor;
+    font-weight:bold;
+}
+.form-section label {
+    font-size:11px;
+}
+.form-section input {
+    margin:0 0 18px 0;
+    width:98%;
+}
+.form-section textarea {
+    width:99%;
+}
+#form-allowed-tags p {
+    color: @color-dark;
+    font-size:11px;
+    margin:0;    
+}
+#form-allowed-tags span {
+    font-style:italic;
+}
+#form-allowed-tags code {
+    font-size:11px;
+    line-height:normal;
+}
+.form-submit {
+    padding:18px 0 0 0;
+    text-align:right;
+}
+.subscribe-to-comments {
+    color: @color-dark;
+    float:left;
+    font-size:11px;
+    margin:0;
+    padding:18px 0 0 0;
+}
+.solo-subscribe-to-comments {
+    color: @color-dark;
+    font-size:11px;
+    padding:18px 0 0 0;
+}
+.comment_license {
+    color: @color-dark;
+    clear:both;
+    font-size:11px;
+    margin:0;
+    padding:18px 0 0 0;
+}
+
+
+/* ~Asides, Sidebars & Widget-Ready Areas
+-------------------------------------------------------------- */
+
+.aside,
+.aside input {
+    font-size:13px;
+    line-height:18px;
+    margin-bottom:6px;
+}
+.aside p,
+.aside ul,
+.aside ol,
+.aside dd,
+.aside pre {
+    margin-bottom:18px;
+}
+.aside pre,
+.aside code {
+    font-size:12px;
+    line-height:18px;
+}
+.aside .current_page_item a {
+    color: @altcolor;
+}
+.aside .current_page_item .page_item a {
+    color: @color-dark;
+}
+.aside .current_page_item .page_item a:hover,
+.aside .current_page_item .page_item a:active {
+    color: @altcolor;
+}
+.aside {
+    color: @color-dark;
+}
+.aside a {
+    color: @color-dark;
+}
+.aside a:active,
+.aside a:hover {
+    color: @altcolor;
+}
+.aside h3 {
+    font-size:15px;
+    font-style:italic;
+    line-height:22px;
+}
+.aside h3 a {
+    text-decoration:none;
+}
+.aside caption {
+    font-size:11px;
+    .font;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+}
+.aside ul {
+    list-style:none;
+    margin-left:0;
+}
+.aside ul ul {
+    list-style:disc;
+    margin:0 0 22px 20px;
+}
+.aside ul ul li {
+    padding:1px 0;
+}
+.aside ul ul ul {
+    margin-bottom:0;
+}
+.aside form,
+.aside table {
+    margin-bottom:22px;
+}
+.aside table {
+    border:none;
+}
+.aside thead {
+    border:1px solid @color-light2;
+}
+.aside tbody {
+    border:1px solid @color-light2;
+}
+.aside th, .aside td {
+    border-right:1px solid @color-light2;
+    padding:.25em .8em;
+}
+.aside tfoot tr {
+    border:none;
+}
+.aside tfoot td {
+    border-color:transparent;
+}
+.widget_tag_cloud {
+    margin:0 0 22px 0;
+}
+.aside #searchsubmit {
+	display: none;	
+}
+/*
+    Main Asides
+*/
+.main-aside ul {
+    padding:0 20px;
+}
+.main-aside h3 {
+}
+.main-aside ul ul {
+    padding:0;
+}
+#primary {
+    border:1px solid @color;
+    padding:18px 0 0 0;
+    margin-bottom:22px;
+}
+/*
+    Content Asides
+*/
+#content .aside {
+    border:1px solid @color;
+    margin:0 0 22px 0;
+    padding:18px 0 0 0;
+}
+#content .aside ul {
+    padding:0 20px;
+}
+#content .aside h3 {
+    .headfont;
+    font-weight:normal;
+    font-size:17px;
+    font-style:italic;
+    padding:0 0 7px 0;
+    text-transform:none;
+}
+#content .aside ul ul {
+    padding:0;
+}
+/*
+    Footer Asides
+*/
+#subsidiary {
+    padding:33px 0 0 0;    
+}
+
+
+/* ~Footer
+-------------------------------------------------------------- */
+
+#footer {
+    border-top:1px solid @color;
+    margin-top:22px;
+}
+#siteinfo {
+    color: @color-dark;
+    font-size:11px;
+    line-height:18px;
+    padding:22px 0 44px 0;
+}
+#siteinfo a {
+    color: @color-dark;
+}
+#siteinfo a:active,
+#siteinfo a:hover {
+    color: @altcolor;
+}
+
+
+/* ~PageNavi
+-------------------------------------------------------------- */
+
+/* Using !important to override PageNavi CSS */
+
+.wp-pagenavi {
+    margin:0 0 0 -.5em;
+    padding:0.5em 0;    
+}
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi span {
+    border:1px solid @color !important;
+    color: @color-dark!important;
+    font-style:normal;
+    margin:0 .375em !important;
+    padding:0.5em 0.25em !important;
+}
+.wp-pagenavi a:visited {
+    border:1px solid @color-light2 !important;
+    color: @color-dark !important;
+}
+.wp-pagenavi a:hover {
+    border:1px solid @color-light2 !important;
+    color: @altcolor !important;
+}
+.wp-pagenavi a:active {
+    border:1px solid @color-light2 !important;
+    color: @altcolor !important;
+}
+.wp-pagenavi span.pages {
+    border:none !important;
+    color: @color-dark !important;
+    margin:0 !important;
+    padding:0 !important;
+}
+.wp-pagenavi span.current {
+    border:none !important;
+    color: @color-dark !important;
+    font-weight:normal !important;
+    margin:0 !important;
+    padding:0 !important;
+}
+.wp-pagenavi span.extend {
+    background-color: @background-light3;
+    border:1px solid @color-dark3;
+    color: @color-dark3;
+    margin:2px;
+    padding:2px 4px;
+}
